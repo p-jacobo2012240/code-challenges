@@ -27,10 +27,23 @@ const DataSuperHeroes = require('./resources/dummy-ex1');
 const showSuperheroInformation = (statement) => {
     const isArray = Array.isArray(statement);
 
-   for(const hero in DataSuperHeroes) {
-        console.log(hero);
-   }
-   
+    if(isArray) {
+        for(const info in DataSuperHeroes[statement]) {
+            const { RealName, Powers, team}  = info;
+
+            console.log('Real Name', RealName);
+            console.log('powers', Powers );
+            console.log('team', team);
+        }
+    } else {
+        const element = DataSuperHeroes[statement];
+        
+        const { RealName, team, Powers } = element;
+
+        console.log('Real Name', RealName);
+        console.log('powers', Powers );
+        console.log('team', team);
+    }
 
 }
 
