@@ -1,27 +1,27 @@
 const DataSuperHeroes = {
     'Iron Man': {
-        RealName: 'Tony Stark',
+        realName: 'Tony Stark',
         powers: ['Advanced technology', 'Air mobility'],
         team: 'The Avengers'
     },
     'Captain America': {
-        RealName: 'Steve Rogers',
-        Powers: ['Superhuman Strength', 'Outstanding Agility and Reflexes'],
+        realName: 'Steve Rogers',
+        powers: ['Superhuman Strength', 'Outstanding Agility and Reflexes'],
         team: 'The Avengers'
     },
     'Thor': {
-        RealName: 'Thor Odinson',
-        Powers: ['Mjolnir', 'Wind and Thunder'],
+        realName: 'Thor Odinson',
+        powers: ['Mjolnir', 'Wind and Thunder'],
         team: 'The Avengers'
     },
     'Spider-Man': {
-        RealName: 'Peter Parker',
-        Powers: ['Swing', 'Sticky Webs', 'Spider Sense'],
+        realName: 'Peter Parker',
+        powers: ['Swing', 'Sticky Webs', 'Spider Sense'],
         team: 'The Avengers'
     },
     'Hulk': {
-        RealName: 'Bruce Banner',
-        Powers: ['Superhuman Strength', 'Invulnerability'],
+        realName: 'Bruce Banner',
+        powers: ['Superhuman Strength', 'Invulnerability'],
         team: 'The Avengers'
     }
 };

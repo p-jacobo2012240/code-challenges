@@ -28,28 +28,27 @@ const showSuperheroInformation = (statement) => {
     const isArray = Array.isArray(statement);
 
     if(isArray) {
-        for(const info in DataSuperHeroes[statement]) {
-            const { RealName, Powers, team}  = info;
 
-            console.log('Real Name', RealName);
-            console.log('powers', Powers );
-            console.log('team', team);
-        }
+        statement.forEach(superHeroKey => {
+            showSuperheroInformation(superHeroKey);
+        })
     } else {
         const element = DataSuperHeroes[statement];
-        
-        const { RealName, team, Powers } = element;
+        const { realName, team, powers } = element;
 
-        console.log('Real Name', RealName);
-        console.log('powers', Powers );
-        console.log('team', team);
+        console.log('Real Name', realName);
+        powers.forEach((power, idx) => {
+            console.log(`Power # ${idx} - ${power}`);
+        })
+        console.log('Team', team);
+        console.log('----------------------')
     }
 
 }
 
 
 // test 1 = calling by name
-//showSuperheroInformation('Iron Man');
+// showSuperheroInformation('Iron Man');
 
 // test 2 = calling by arrays
-showSuperheroInformation(['Iron Man', 'Hulk']);
+// showSuperheroInformation(['Iron Man', 'Hulk']);
