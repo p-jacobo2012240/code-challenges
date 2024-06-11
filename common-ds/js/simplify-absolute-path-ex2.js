@@ -20,23 +20,20 @@ const simplifyPath = (path)=> {
     let stack = [];
     const splitPath = path.split('/');
 
-    stack = splitPath.map(( part, idx ) => {     
-        if(part === "..") {
+    splitPath.filter(( part ) => {     
+        if(part == "..") {
             stack.pop();
-        } else if ( part != '.' && part != "" ) {
+        } else if (part != '.' &&  part != "") {
             stack.push(part);
         }
-
-        return stack;
     });
-
 
     return '/' + stack.join('/');
 } 
 
-// test 1 = get and simplify
-console.log('TEST1', simplifyPath('/x/./y/../../z'));
-
-// test 2 = get a two //
-console.log('TEST 2', simplifyPath("/home//tests/"));
+// success all cases
+console.log(simplifyPath("/home/"));
+console.log(simplifyPath('/x/./y/../../z'));
+console.log(simplifyPath("/../"));
+console.log(simplifyPath("/home//tests/"));
 
