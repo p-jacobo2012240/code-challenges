@@ -17,7 +17,7 @@ const isBalanced = (expression) => {
     let stack = [];
     const splitPath = expression.split("");
 
-    splitPath.filter((sing, idx) => {
+    splitPath.filter(sing => {
         if(sing == "(" || sing == "[" || sing == "{" ) {
             stack.push(sing);
         }
@@ -25,14 +25,24 @@ const isBalanced = (expression) => {
         if(sing == ")" || sing == "]" || sing == "}" ) { 
             if(stack.includes("(") && sing == ")") {
                 stack.pop();
-            }     
+            }
+
+            if(stack.includes("[") && sing == "]") {
+                stack.pop();
+            }
+            
+            if(stack.includes("{") && sing == "}") {
+                stack.pop();
+            }   
         }
     });
 
     return  (stack.length == 0) ? true : false;
 }
 
-console.log(isBalanced("()"));
-console.log(isBalanced("()[]{}"));
-console.log(isBalanced("([)]"));
+// successed all cases
+console.log(isBalanced("()"));           
+console.log(isBalanced("()[]{}"));       
+console.log(isBalanced("(]"));           
+console.log(isBalanced("([)]"));         
 console.log(isBalanced("{[]}")); 
