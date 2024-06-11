@@ -1,4 +1,4 @@
-/*
+/**
 Statement Exercise 1:
 Given an array or a Marvel superhero object, make a program that can
 show information about a superhero.
@@ -25,9 +25,8 @@ const DataSuperHeroes = require('./resources/dummy-ex1');
 
 
 const showSuperheroInformation = (statement) => {
-    const isArray = Array.isArray(statement);
 
-    if(isArray) {
+    if(Array.isArray(statement)) {
 
         statement.forEach(superHeroKey => {
             showSuperheroInformation(superHeroKey);
@@ -51,4 +50,4 @@ const showSuperheroInformation = (statement) => {
 // showSuperheroInformation('Iron Man');
 
 // test 2 = calling by arrays
-// showSuperheroInformation(['Iron Man', 'Hulk']);
+showSuperheroInformation(['Iron Man', 'Hulk']);
