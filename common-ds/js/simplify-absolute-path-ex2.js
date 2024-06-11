@@ -16,10 +16,27 @@ Ensure multiple consecutive slashes are treated as a single slash.
  */
 
 const simplifyPath = (path)=> { 
-    
-    const splitPath = path.split('');
-    console.log('hi there path is...', splitPath );
+
+    let stack = [];
+    const splitPath = path.split('/');
+
+    stack = splitPath.map(( part, idx ) => {     
+        if(part === "..") {
+            stack.pop();
+        } else if ( part != '.' && part != "" ) {
+            stack.push(part);
+        }
+
+        return stack;
+    });
+
+
+    return '/' + stack.join('/');
 } 
 
 // test 1 = get and simplify
-simplifyPath('/x/./y/../../z');
+console.log('TEST1', simplifyPath('/x/./y/../../z'));
+
+// test 2 = get a two //
+console.log('TEST 2', simplifyPath("/home//tests/"));
+
