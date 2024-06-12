@@ -17,12 +17,15 @@ const evalRPN = (tokens) => {
 
     for(const token of tokens) { 
         if(!isNaN(token)) {
+            // ensured the type of value
             numStack.push(Number(token));
         } else {
             let result, a, b = 0;
             
             a = numStack.pop();
             b = numStack.pop();
+
+            console.log(`part a = ${a} part b = ${b}`)
 
             switch(token) {
                 case "+":
@@ -35,7 +38,7 @@ const evalRPN = (tokens) => {
                     result = a * b;
                     break;
                 case '/':
-                    result = Math.trunc(a / b);
+                    result = Math.trunc(a / b); //TEMP
                     break;
             }
 
@@ -43,6 +46,7 @@ const evalRPN = (tokens) => {
         }
     }
 
+    // removed the last reference.
     return numStack.pop();
 }
 
