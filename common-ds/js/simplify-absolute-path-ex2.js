@@ -31,7 +31,7 @@ const simplifyPath = (path)=> {
     return '/' + stack.join('/');
 } 
 
-// success all cases
+// successed all cases
 console.log(simplifyPath("/home/"));
 console.log(simplifyPath('/x/./y/../../z'));
 console.log(simplifyPath("/../"));
