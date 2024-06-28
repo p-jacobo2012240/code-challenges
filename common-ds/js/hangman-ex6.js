@@ -26,7 +26,7 @@ const getWord = async () => {
 
     const sortedDummyData = [...dummyData].sort();
     const randomIndex = Math.floor(Math.random() * sortedDummyData.length);
-    correctWord = sortedDummyData[randomIndex].split('');
+    correctWord = sortedDummyData.at(randomIndex).split('');
     secretQuestion = await replaceWord(correctWord);
     
     return correctWord;
@@ -42,18 +42,14 @@ console.log('secret word ', replaceWord());
 
 const main = async () => {
     
-    await getWord();
-
     console.log('secret word ', await replaceWord());
 
     prompt.start();
-    prompt.get(['Your guess'], (err, result) => {
-        if (err) {
-            console.error(err);
-            return;
-        }
+    
+    prompt.get(await getWord(), (err, result) => {
+
         console.log('Command-line input received:');
-        console.log('  Your guess:', result['Your guess']);
+        console.log('  Your guess:', result);
     });
 }
 
