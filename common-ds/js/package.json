@@ -1,9 +1,11 @@
 {
   "name": "common-ds-js",
   "version": "1.0.0",
-  "main": "find-into-array.ex1.js", 
+  "main": "find-into-array.ex1.js",
   "scripts": {
     "start": "node find-into-array-ex1.js"
   },
-  "dependencies": {}
+  "dependencies": {
+    "prompt": "^1.3.0"
+  }
 }
