@@ -18,21 +18,43 @@ You have 5 attempts left
  */
 const prompt = require('prompt');
 const dummyData = require('./resources/dummy-ex2');
- 
 
-const getWord = () => {
-    const randomIndex = Math.floor(Math.random() * dummyData.length);   
-    return dummyData.sort().at(randomIndex);
+let correctWord = [];
+let secretQuestion =  [];
+
+const getWord = async () => {
+
+    const sortedDummyData = [...dummyData].sort();
+    const randomIndex = Math.floor(Math.random() * sortedDummyData.length);
+    correctWord = sortedDummyData[randomIndex].split('');
+    secretQuestion = await replaceWord(correctWord);
+    
+    return correctWord;
 }
 
-prompt.start();
+
+const replaceWord = async(list) => {
+    return list.map(() => '-' );
+}
 
 
-prompt.get([getWord()], (err, result) => {
-    //
-    // Log the results.
-    //
-    console.log('Command-line input received:');
-    console.log('  username: ' + result.getWord());
-  });
+console.log('secret word ', replaceWord());
 
+const main = async () => {
+    
+    await getWord();
+
+    console.log('secret word ', await replaceWord());
+
+    prompt.start();
+    prompt.get(['Your guess'], (err, result) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+        console.log('Command-line input received:');
+        console.log('  Your guess:', result['Your guess']);
+    });
+}
+
+main();
