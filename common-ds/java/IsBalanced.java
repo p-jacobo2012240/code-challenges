@@ -24,7 +24,6 @@ public class IsBalanced {
 
         Stack<String> stack = new Stack<>();
         String[] splitedExpression = expression.split("");
-        Boolean isValid = null;
 
         for(String ch : splitedExpression) {
             if(ch.equals("(") || ch.equals("[") || ch.equals("{")) {
@@ -46,13 +45,7 @@ public class IsBalanced {
             }
         }
 
-        if(stack.size() == 0) {
-            isValid = true;
-        } else {
-            isValid = false;
-        }
-
-        return isValid;
+        return (stack.isEmpty()) ? true : false;
     }
 
 }
