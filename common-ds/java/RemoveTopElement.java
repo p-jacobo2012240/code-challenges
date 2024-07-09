@@ -7,6 +7,6 @@ class Solution {
                 match++;
             }
         }
-        return k;
+        return match;
     }
 }
