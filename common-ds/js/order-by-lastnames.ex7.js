@@ -17,3 +17,12 @@ sortByLastName([
 ]);
 
 */
+const sortByLastName = (list) => {
+
+    const elements = [];
+
+
+}
+
+
+console.log(sortByLastName);
