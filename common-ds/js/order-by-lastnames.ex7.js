@@ -19,10 +19,28 @@ sortByLastName([
 */
 const sortByLastName = (list) => {
 
-    const elements = [];
+    const lastNames = list
+        .map((person) => person.split(" ")[1])
+        .sort();
 
+    const orderedList = lastNames.map((element) => {
+        const completed = list
+            .find(completeName => completeName.split(" ")[1] == element);
 
+        return completed;
+    });
+    return orderedList;
 }
 
 
-console.log(sortByLastName);
+//test-case
+console.log(sortByLastName([
+    "Pablo Jacobo",
+    "Antonio Albani",
+    "Al Pacino",
+    "Claude Monet",
+    "Robert de Niro",
+    "George R.R.Martin",
+    "Sylvester Stallone",
+    "Tom Watkins"
+]));
