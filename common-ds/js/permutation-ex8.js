@@ -19,22 +19,21 @@ permutation([1, 2, 3, 5])) // Returns: 4
 
 
 const permutation = (list) => {
-    
-    let checkValidator = 0;
+
+    let missingMaxNumbers = [];
     const orderList = list.sort((a, b) => a - b );
 
     for(let i = 0; i < orderList.length; i++) {
-        if(orderList[i] > (orderList[i] + 1)) {
-            checkValidator = i;
-        } else {
-            checkValidator = orderList[i];
+        if(orderList[i + 1] != (orderList[i] + 1) ) {
+            missingMaxNumbers.push((i + 1));
         }
     }
 
-    return checkValidator;
+    missingMaxNumbers.pop();
+    return missingMaxNumbers[missingMaxNumbers.length - 1];
 }
 
 
 // TEST CASE
-console.log(permutation([1, 2, 3, 4, 5]));
-console.log(permutation([1, 2, 3, 5]));
+console.log(permutation([1, 2, 3, 4, 5,6]));
+// console.log(permutation([1, 2, 3, 5]));
