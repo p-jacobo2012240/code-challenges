@@ -23,6 +23,7 @@ const permutation = (list) => {
     let missingMaxNumbers = [];
     const orderList = list.sort((a, b) => a - b );
 
+    //searching approach
     for(let i = 0; i < orderList.length; i++) {
         if(orderList[i + 1] != (orderList[i] + 1) ) {
             missingMaxNumbers.push((i + 1));
