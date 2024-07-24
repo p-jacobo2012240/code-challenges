@@ -11,6 +11,14 @@ integerARoman(345)); // Result: CCCXLV
 
 const integerARoman = (number) => {
 
+    // final string 
+
+    // map of roman numbers
+
+    // parse to integer to roman
+
+    // return final outcome
+
 
 }
 
