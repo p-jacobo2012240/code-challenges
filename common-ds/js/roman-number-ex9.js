@@ -23,4 +23,6 @@ const integerARoman = (number) => {
 }
 
 //test case
-integerARoman(345));
+integerARoman(345);
+
+integerARoman(10);
