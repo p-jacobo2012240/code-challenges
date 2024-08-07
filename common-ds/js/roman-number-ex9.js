@@ -9,10 +9,9 @@ integerARoman(345)); // Result: CCCXLV
  
 */
 
+const integerToRoman = (number) => {
 
-
-
-const integerARoman = (number) => {
+    let result = "";
 
     const NUMBER_MAPS = {
         100: "M", 900: "CM", 500: "D", 400: "CD", 100: "C", 
@@ -20,11 +19,24 @@ const integerARoman = (number) => {
         4: "IV", 1: "I"
     };
 
-    for(let i =0; i < Object(NUMBER_MAPS).length; i++) {
+    const keys = Object.keys(NUMBER_MAPS)
+        .map(Number).sort((a, b) => b - a);
 
-        console.log('results',  Object.keys(NUMBER_MAPS)[i] )
+    for(let i =0; i < keys.length; i++) {
+        
+        let currentDecimalNumber = keys[i];
+        let currentRomanNumber = NUMBER_MAPS[currentDecimalNumber];
+        
+        while(number >= currentDecimalNumber) {
+            result += currentRomanNumber;
+            number -= currentDecimalNumber;
+        }
+        
+        console.log('result', result )
+        return result;
     }
 }
 
 //test case
-integerARoman(345);
+console.log(integerToRoman(123));
+console.log(integerToRoman(450));
