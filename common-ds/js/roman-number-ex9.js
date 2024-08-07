@@ -9,20 +9,22 @@ integerARoman(345)); // Result: CCCXLV
  
 */
 
+
+
+
 const integerARoman = (number) => {
 
-    // final string 
+    const NUMBER_MAPS = {
+        100: "M", 900: "CM", 500: "D", 400: "CD", 100: "C", 
+        90: "XC", 50: "L", 40: "XL", 10: "X", 9: "IX", 5: "V", 
+        4: "IV", 1: "I"
+    };
 
-    // map of roman numbers
+    for(let i =0; i < Object(NUMBER_MAPS).length; i++) {
 
-    // parse to integer to roman
-
-    // return final outcome
-asdasd
-
+        console.log('results',  Object.keys(NUMBER_MAPS)[i] )
+    }
 }
 
 //test case
 integerARoman(345);
-
-integerARoman(10);
