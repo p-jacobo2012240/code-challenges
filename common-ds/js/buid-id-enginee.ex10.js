@@ -16,8 +16,21 @@ Examples:
 generateDNILetter("25439343");  // Result: 25439343D
  */
 
-const generateDNILetter = (numbers) => {
+const generateDNILetter = (idNumber) => {
 
+    const letters = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 
+        'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T '];
+
+    idNumber = parseInt(idNumber);
+
+    if(idNumber > 0 && idNumber < 99999999 ) {
+        
+
+    } else {
+        return `invalid idNumber${idNumber }`;
+    }
+
+    return typeof idNumber;
 }
 
 //Test case 
