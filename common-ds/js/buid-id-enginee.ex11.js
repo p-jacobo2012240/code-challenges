@@ -1,6 +1,6 @@
 /**
 
-Statement Exercise 10:
+Statement Exercise 11:
 Create a function that receives a DNI (8 numbers) and calculates the letter of the DNI
  
 It is an easy mathematical process that is based on obtaining the 
@@ -24,9 +24,12 @@ const generateDNILetter = (idNumber) => {
     idNumber = parseInt(idNumber);
 
     if(idNumber > 0 && idNumber < 99999999 ) {
+        let candidateIdx = idNumber % 23;
+        let validIdx = letters.at(candidateIdx);
         
-
+        return idNumber + validIdx;
     } else {
+
         return `invalid idNumber${idNumber }`;
     }
 
