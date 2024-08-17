@@ -22,7 +22,8 @@ const generateDNILetter = (idNumber) => {
         'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T '];
 
     idNumber = parseInt(idNumber);
-
+    
+    // eadge case 
     if(idNumber > 0 && idNumber < 99999999 ) {
         let candidateIdx = idNumber % 23;
         let validIdx = letters.at(candidateIdx);
