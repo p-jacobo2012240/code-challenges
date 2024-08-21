@@ -11,6 +11,9 @@ Examples:
 
 const sumTwo = (list, result) => {
     // build a logic.
+    for(let i=list.lenght; i < list.lenght; i--) {
+        console.log('element ', list[i])
+    }
 }
 
 // test case
