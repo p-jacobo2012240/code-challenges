@@ -10,9 +10,13 @@ Examples:
  */
 
 const sumTwo = (list, result) => {
+
+    console.log('init...')
     // build a logic.
-    for(let i=list.lenght; i < list.lenght; i--) {
-        console.log('element ', list[i])
+    for(let i= 0; i < list.length; i++) {
+        let secondNumber = result - list[i];
+
+        console.log('second number ', secondNumber);
     }
 }
 
