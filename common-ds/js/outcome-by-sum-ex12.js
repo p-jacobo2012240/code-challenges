@@ -17,6 +17,7 @@ const sumTwo = (list, result) => {
         let secondNumber = result - list[i];
 
         console.log('second number ', secondNumber);
+        console.log('print a result ');
     }
 }
 
