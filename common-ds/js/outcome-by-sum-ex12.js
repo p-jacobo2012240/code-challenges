@@ -11,12 +11,14 @@ Examples:
 
 const sumTwo = (list, result) => {
 
-    console.log('init...')
-    // build a logic.
     for(let i= 0; i < list.length; i++) {
-        let secondNumber = result - list[i];
+        let firstNumber = list[i];
+        let secondNumber = result - firstNumber;
 
-        console.log('print a result ');
+        if(list.includes(secondNumber) && secondNumber != firstNumber) {
+            return [firstNumber, secondNumber];
+        }
+
     }
 }
 
