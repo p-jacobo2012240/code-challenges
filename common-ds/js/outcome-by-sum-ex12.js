@@ -24,3 +24,4 @@ const sumTwo = (list, result) => {
 
 // test case
 console.log(sumTwo([4, 5, 9, 1], 10)) // [9, 1] 
+console.log(sumTwo([3, 7, 8, 2], 10)) // [ 3, 7]
