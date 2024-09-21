@@ -1,6 +1,6 @@
 /**
  * 
-Statement Exercise 12:
+Statement:
 Create a program that counts the words in a text
 
 Examples:
