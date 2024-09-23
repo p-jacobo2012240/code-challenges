@@ -27,7 +27,24 @@ bad: 1
 */ 
 
 const countWords = (text) => {
-    // do the magic..
+    // creating array with the words
+    const wordsList = text.toLowerCase().split(" ");
+
+    // creare a ampty object with a counter
+    let occurenciesWord = {};
+
+    for(const keyWord of wordsList) {
+        
+        const countPerWord = wordsList.reduce((accumulator, element) => {
+            return (element === keyWord) ? accumulator + 1 : accumulator;
+        }, 0);
+
+       occurenciesWord[keyWord] = countPerWord; 
+    }
+
+    return occurenciesWord;
 }
 
+// test cases
 console.log(countWords("Saint Roque's dog does not have a tail because he is a very very bad dog"));
+console.log(countWords("maybe the people have a super hero but the the the ... not words"));
