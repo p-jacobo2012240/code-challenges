@@ -23,7 +23,7 @@ sortByLength([
  */
 
 const sortByLength = (words) => {
-    return words.sort((prev, curr) => prev.length - curr.length );
+    return words.sort((prev, curr) => prev.length - curr.length ); 
 }
 
 console.log(sortByLength([
