@@ -11,7 +11,15 @@ renamingFiles(["name", "lastname", "name", "name"]);
 
 Returns:
 [ 'name', 'lastname', 'name(1)', 'name(2)' ] 
-
+------
+[
+  'evaluation.docx',
+  'evaluation.docx(1)',
+  'evaluation.docx(2)',
+  'homework.txt',
+  'homework.txt(1)',
+  'results.bat'
+]
  */
 
 const renamingFiles = (files) => {
@@ -35,3 +43,5 @@ const renamingFiles = (files) => {
 
 //test cases
 console.log(renamingFiles(["name", "lastname", "name", "name"]));
+console.log('--------------')
+console.log(renamingFiles(["evaluation.docx", "evaluation.docx", "evaluation.docx", "homework.txt", "homework.txt", "results.bat" ]));
