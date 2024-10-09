@@ -15,7 +15,22 @@ Returns:
  */
 
 const renamingFiles = (files) => {
-    
+    const INITIAL_INDEX = 0;
+
+    const renamedFiles = files.map((file, idx) => {
+
+        const filteredFiles = files
+            .slice(INITIAL_INDEX, idx)  // [], [], [ 'name' ], [ 'name', 'name' ] applying sliced
+            .filter((originalFile) => originalFile == file);  // [ 'name', 'name', 'name' ], [ 'lastname' ],  [ 'name', 'name', 'name' ] without slice per each iteration.
+            
+        if(filteredFiles.length == 0) {
+            return file;
+        }
+        
+        return `${file}(${filteredFiles.length})`;
+    });
+
+    return renamedFiles;
 }
 
 //test cases
