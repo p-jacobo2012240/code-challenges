@@ -25,8 +25,10 @@ const removeDuplicates = (nums) => {
             if(counter[num] >= MAX_ALLOWED_BY_COUNTER) {
                 counter[num] = STANDARD_VALUE;
             }
-        }        
+        }       
     }
+
+    let results = Object.values(counter).reduce((acc, curr) => console.log('work in proces') )
 
     return counter;
 }
