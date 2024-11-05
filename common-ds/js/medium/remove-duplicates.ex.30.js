@@ -28,9 +28,11 @@ const removeDuplicates = (nums) => {
         }       
     }
 
-    let results = Object.values(counter).reduce((acc, curr) => console.log('work in proces') )
+    let results = Object.values(counter).reduce((prev, curr) => {
+        return prev + curr;
+    });
 
-    return counter;
+    return results;
 }
 
 // test cases
