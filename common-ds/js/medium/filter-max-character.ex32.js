@@ -22,7 +22,7 @@ const filteredPhrase = (phrase) => {
 
 }
 
-//test case
+//test cases
 console.log(filteredPhrase("Hello, I'm Hackobo dev it's cold today"));
 
 console.log(filteredPhrase(`It is a long established fact that a reader will be distracted 
