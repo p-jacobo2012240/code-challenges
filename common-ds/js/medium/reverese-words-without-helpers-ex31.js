@@ -6,20 +6,22 @@
  * We cannot use native language functions.
  *
  * Examples:
- * invertWords("Hello, I'm Hackobo Engineer"); // Returns: Hackobo Engineer, I'm Hello
+ * invertWords("Hello, I'm Hackobo Engineer"); // Returns:  Engineer Hackobo , I'm Hello
  * 
  */
 
 
 const invertWords = (text) => {
 
-    const splitedText = text.split('');
-
+    const splitedText = text.split(' ');
+    let reverseWord = '';
+     
     for(let i = ( splitedText.length - 1) ; i >= 0; i--) {
-        console.log('word ', splitedText[i]); 
+        reverseWord +=  `${splitedText[i]} `;
     }
 
+    return reverseWord;
 }
 
 //test case
-console.log("Hello, I'm Hackobo Engineer");
+console.log(invertWords("Hello, I'm Hackobo Engineer"));
