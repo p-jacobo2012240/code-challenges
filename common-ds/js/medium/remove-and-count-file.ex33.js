@@ -29,3 +29,4 @@ const countElements = (wordString) => {
 
 //test case
 console.log(countElements("pc -computer _computer console- ps5 theLastOfUs computer"));
+console.log(countElements("hack_. dev was writing -a- code "));
