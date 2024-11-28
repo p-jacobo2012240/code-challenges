@@ -25,12 +25,16 @@ const group = (data, criteria) => {
         let propertie = typeof criteria == 'function' 
             ? criteria(elemet) : elemet[criteria];
 
-            // build...
-
+        if(!result[result]) {
+            result[propertie] = [];
+        }
+    
+        // add value to the propertie
+        result[propertie].push(elemet);
     });
 
-    
     console.log(data. criteria);
+    //return result;
 };
 
 // test case
