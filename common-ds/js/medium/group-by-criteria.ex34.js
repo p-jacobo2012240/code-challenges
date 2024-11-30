@@ -33,8 +33,8 @@ const group = (data, criteria) => {
         result[propertie].push(elemet);
     });
 
-    console.log(data. criteria);
-    //return result;
+    //console.log(data. criteria);
+    return result;
 };
 
 // test case
