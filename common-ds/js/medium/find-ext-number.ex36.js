@@ -14,7 +14,12 @@
  */
 
 const findPairsWithSum = (list, result ) => {
-    // WIP   
+    // valid array that have 2 numbers
+    //pair for two numbers
+    // numbers array processed
+    // check if the sum are the correct outcome
+
+    // return results...
 }
 
 // test case
