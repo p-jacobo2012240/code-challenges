@@ -14,12 +14,21 @@
  */
 
 const findPairsWithSum = (list, result ) => {
-    // valid array that have 2 numbers
-    //pair for two numbers
-    // numbers array processed
-    // check if the sum are the correct outcome
+    const MIN_MATRIX = 2;
+    let couples = [];
 
-    // return results...
+    if(Array.isArray(list) || list.length < MIN_MATRIX) {
+        return false;
+    }
+    
+    for(const currentNum of list) {
+        for(const anotherNumber of list.slice(list.indexOf(currentNum) + 1)) {
+            // log the anotherNumber
+            console.log(anotherNumber);
+        }
+    }
+
+    // return ...
 }
 
 // test case
