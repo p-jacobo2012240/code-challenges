@@ -23,13 +23,14 @@ const findPairsWithSum = (list, result ) => {
     
     for(const currentNum of list) {
         for(const anotherNumber of list.slice(list.indexOf(currentNum) + 1)) {
-            // log the anotherNumber
-            console.log(anotherNumber);
+           if(currentNum + anotherNumber == result) {
+            couples.push([currentNum, anotherNumber]);
+           } 
         }
     }
 
-    // return ...
+    return couples;
 }
 
 // test case
-console.log(findPairsWithSum([4, 5, 6, 7], 8));
+console.log(findPairsWithSum([1,2,3,4,5,6,7,8,9], 12));
