@@ -34,3 +34,4 @@ const findPairsWithSum = (list, result ) => {
 
 // test case
 console.log(findPairsWithSum([1,2,3,4,5,6,7,8,9], 12));
+console.log(findPairsWithSum([1,2,3,4], 5));
